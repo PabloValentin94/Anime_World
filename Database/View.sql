@@ -1,0 +1,1 @@
+CREATE VIEW Gerar_Ranking AS SELECT pla.usuario AS Jogador, pla.anime AS Grupo, pla.recorde AS Recorde FROM Player pla ORDER BY pla.recorde ASC;

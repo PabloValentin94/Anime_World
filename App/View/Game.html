@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="./View/Assets/CSS/Game.css">
+
+        <script defer type="text/javascript" src="./View/Assets/JS/Game.js">  </script>
+
+        <link rel="icon" type="img/x-icon" href="./View/Assets/Images/Favicon.png">
+
+        <title> (00:00:00) Anime World - Jogo </title>
+
+    </head>
+
+    <body oncontextmenu="return false">
+
+        <div id="initialization">
+
+            <button title="Iniciar jogo." onclick="iniciar_jogo()">  </button>
+
+        </div>
+
+        <div id="container">
+
+            <div class="row">
+
+                <div class="card" id="0" onclick="revelar_carta('0')"></div>
+                <div class="card" id="1" onclick="revelar_carta('1')"></div>
+                <div class="card" id="2" onclick="revelar_carta('2')"></div>
+                <div class="card" id="3" onclick="revelar_carta('3')"></div>
+                <div class="card" id="4" onclick="revelar_carta('4')"></div>
+                <div class="card" id="5" onclick="revelar_carta('5')"></div>
+                <div class="card" id="6" onclick="revelar_carta('6')"></div>
+                <div class="card" id="7" onclick="revelar_carta('7')"></div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="card" id="8" onclick="revelar_carta('8')"></div>
+                <div class="card" id="9" onclick="revelar_carta('9')"></div>
+                <div class="card" id="10" onclick="revelar_carta('10')"></div>
+                <div class="card" id="11" onclick="revelar_carta('11')"></div>
+                <div class="card" id="12" onclick="revelar_carta('12')"></div>
+                <div class="card" id="13" onclick="revelar_carta('13')"></div>
+                <div class="card" id="14" onclick="revelar_carta('14')"></div>
+                <div class="card" id="15" onclick="revelar_carta('15')"></div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="card" id="16" onclick="revelar_carta('16')"></div>
+                <div class="card" id="17" onclick="revelar_carta('17')"></div>
+                <div class="card" id="18" onclick="revelar_carta('18')"></div>
+                <div class="card" id="19" onclick="revelar_carta('19')"></div>
+                <div class="card" id="20" onclick="revelar_carta('20')"></div>
+                <div class="card" id="21" onclick="revelar_carta('21')"></div>
+                <div class="card" id="22" onclick="revelar_carta('22')"></div>
+                <div class="card" id="23" onclick="revelar_carta('23')"></div>
+
+            </div>
+
+        </div>
+
+        <div id="time_banner">
+
+            <div id="result">
+
+                <p> <span style="font-size: 30px; font-weight: bolder;"> Seu tempo foi: </span> </p>
+
+                <p> <span id="hours" style="color: #00007D;">  </span> : <span id="minutes" style="color: #00007D;">  </span> : <span id="seconds" style="color: #00007D;">  </span> </p>
+
+                <form method="post" action="/game/save" onsubmit="document.getElementById('result').style.display = 'none'">
+
+                    <input id="record" type="hidden" name="recorde" value="">
+
+                    <button style="background-color: #008000;" title="Salvar recorde atual." type="submit" onclick="alert('Caso você já possua um recorde melhor, a pontuação atual será desconsiderada.'); document.body.style.pointerEvents = 'none'"> Salvar Recorde </button>
+
+                </form>
+
+                <button style="background-color: #FF0000;" title="Reiniciar jogo." onclick="jogar_novamente()"> Tentar Novamente </button>
+
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>

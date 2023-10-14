@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="./View/Assets/CSS/Form.css">
+
+        <script defer type="text/javascript" src="./View/Assets/JS/Form.js">  </script>
+
+        <link rel="icon" type="img/x-icon" href="./View/Assets/Images/Favicon.png">
+
+        <title> Anime World - Formulário </title>
+
+    </head>
+
+    <body oncontextmenu="return false;">
+
+        <div id="container">
+
+            <form id="choice" method="post" action="/form/save" onsubmit="document.getElementById('buttons').style.display = 'none';">
+
+                <div id="options">
+    
+                    <select id="opcao" name="opcao" onchange="mudar_formulario()">
+
+                        <optgroup label="Usuário">
+
+                            <option title="Clique aqui, para criar um perfil no jogo." value="cadastro"> Cadastro </option>
+                            <option title="Clique aqui, para editar um perfil do jogo." value="edicao"> Edição </option>
+                        
+                        </optgroup>
+
+                        <optgroup label="Administrador">
+
+                            <option title="Clique aqui, para desativar um perfil do jogo." value="banimento"> Banimento </option>
+                            <option title="Clique aqui, para reativar um perfil do jogo." value="desbanimento"> Desbanimento </option>
+
+                        </optgroup>
+                        
+                        <optgroup label="Jogo">
+
+                            <option title="Clique aqui, para usar um perfil que já exista." value="login"> Login </option>
+
+                        </optgroup>
+    
+                    </select>
+    
+                </div>
+    
+                <div id="form">  </div>
+
+                <div id="buttons">
+
+                    <a id="botao_retornar" aria-label="Voltar à tela inicial." href="/"> Voltar </a>
+    
+                    <button id="botao_prosseguir" type="submit" aria-label="Acessar o jogo utilizando meu perfil."> Entrar </button>
+
+                </div>
+    
+            </form>
+    
+            <div id="banner">  </div>
+
+        </div>
+        
+    </body>
+
+</html>

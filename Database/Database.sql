@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS db_anime_world;
+
+USE db_anime_world;
+
+CREATE TABLE IF NOT EXISTS Player (
+
+	id INT AUTO_INCREMENT UNIQUE PRIMARY KEY,
+
+	anime VARCHAR(25) DEFAULT "Naruto Shippuden",
+
+	usuario VARCHAR(25) UNIQUE NOT NULL,
+	senha VARCHAR(32) NOT NULL,
+
+	recorde TIME DEFAULT NULL,
+
+	ativo BOOL DEFAULT TRUE
+
+);
+
+DESC Player;

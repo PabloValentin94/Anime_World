@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="./View/Assets/CSS/Index.css">
+
+        <script defer type="text/javascript" src="./View/Assets/JS/Index.js">  </script>
+
+        <link rel="icon" type="img/x-icon" href="./View/Assets/Images/Favicon.png">
+
+        <title> Anime World - Jogo da Memória </title>
+
+    </head>
+
+    <body oncontextmenu="return false;">
+
+        <div id="background_gradient">
+
+            <div id="title">
+
+                <img src="./View/Assets/Images/Favicon.png" alt="Icon">
+
+                <h1> Anime</br>World </h1>
+
+            </div>
+
+            <div id="theme">
+
+                <label for="theme_value"> Escolha um anime: </label>
+                <select name="anime" id="theme_value" onchange="change_theme();">
+
+                    <option value="0"> Naruto Shippuden </option>
+                    <option value="1"> JoJo's Bizarre Adventure </option>
+                    <option value="2"> Dragon Ball Z </option>
+                    <option value="3"> Hunter X Hunter </option>
+
+                </select>
+
+            </div>
+
+            <form action="/form">
+
+                <input id="theme_choice" name="theme_choice" type="hidden" value="">
+
+                <button type="submit"> Clique aqui para prosseguir </button>
+
+            </form>
+
+        </div>
+        
+    </body>
+
+</html>

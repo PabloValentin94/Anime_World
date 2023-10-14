@@ -1,0 +1,183 @@
+/* Estilos: */
+
+* {
+
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    background-image: linear-gradient(315deg, #98C8FD, #8B7EFB);
+
+}
+
+#initialization {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+#initialization button {
+
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+    background-image: url("../Images/Play.png");
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+#container {
+
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+
+}
+
+.row {
+
+    height: 30%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.card {
+
+    height: 90%;
+    width: 11%;
+    border: 3px solid #FFFFFF;
+    background-color: #202020;
+    background-image: url("../Images/Favicon.png");
+    background-size: 60% 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+}
+
+.reveal_card {
+
+    animation: reveal_card 0.30s 1 linear;
+
+}
+
+.hidden_card {
+
+    animation: hidden_card 0.25s 1 linear;
+
+}
+
+#time_banner {
+
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    background-image: url("../Images/Victory.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#time_banner div {
+
+    height: 250px;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 2.5%;
+    right: 1.25%;
+    background-color: rgba(255, 255, 255, 0.750);
+    border: 5px solid #000000;
+    border-radius: 10px;
+
+}
+
+#time_banner div p {
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    cursor: text;
+
+}
+
+#time_banner div button {
+
+    border: 3px solid #000000;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+/* Animações: */
+
+@keyframes reveal_card {
+
+    0% {
+
+        transform: rotateY(0deg);
+
+    }
+
+    100% {
+
+        transform: rotateY(-180deg);
+
+    }
+
+}
+
+@keyframes hidden_card {
+
+    0% {
+
+        transform: rotateY(0deg);
+
+    }
+
+    100% {
+
+        transform: rotateY(180deg);
+
+    }
+
+}
