@@ -74,17 +74,17 @@
 
                 <p> <span style="font-size: 30px; font-weight: bolder;"> Seu tempo foi: </span> </p>
 
-                <p> <span id="hours" style="color: #00007D;">  </span> : <span id="minutes" style="color: #00007D;">  </span> : <span id="seconds" style="color: #00007D;">  </span> </p>
+                <p> <span id="hours" style="color: #202020">  </span> : <span id="minutes" style="color: #202020">  </span> : <span id="seconds" style="color: #202020">  </span> </p>
 
                 <form method="post" action="/game/save" onsubmit="document.getElementById('result').style.display = 'none'">
 
                     <input id="record" type="hidden" name="recorde" value="">
 
-                    <button style="background-color: #008000;" title="Salvar recorde atual." type="submit" onclick="alert('Caso você já possua um recorde melhor, a pontuação atual será desconsiderada.'); document.body.style.pointerEvents = 'none'"> Salvar Recorde </button>
+                    <button style="background-color: #008000" title="Salvar recorde atual." type="submit" onclick="alert('Caso você já possua um recorde melhor, a pontuação atual será desconsiderada.'); document.body.style.pointerEvents = 'none'"> Salvar Recorde </button>
 
                 </form>
 
-                <button style="background-color: #FF0000;" title="Reiniciar jogo." onclick="jogar_novamente()"> Tentar Novamente </button>
+                <button style="background-color: #FF0000" title="Reiniciar jogo." onclick="jogar_novamente()"> Tentar Novamente </button>
 
             </div>
 

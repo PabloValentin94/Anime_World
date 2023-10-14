@@ -1,0 +1,236 @@
+/* Estilos: */
+
+* {
+
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    background-image: linear-gradient(315deg, #98C8FD, #8B7EFB);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#container {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    overflow-x: hidden;
+
+}
+
+#header {
+
+    height: 120px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}
+
+#title {
+
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+#title img {
+
+    width: 10%;
+    margin-right: 5px;
+
+}
+
+#refresh {
+
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+#botao_recarregar {
+
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    background-image: url("../Images/Refresh.png");
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border: 2px solid #202020;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+#search {
+
+    height: 80px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+#search label {
+
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: text;
+
+}
+
+#usuario {
+
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    color: #000000;
+    border: none;
+    border-radius: 2px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 5px;
+    outline: 1px solid #000000;
+    cursor: pointer;
+    
+}
+
+#usuario:focus {
+
+    outline: 2px solid #FFFF00;
+    cursor: text;
+
+}
+
+#search button {
+
+    height: auto;
+    width: auto;
+    background-color: #202020;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+#search button:hover {
+
+    color: #FFFF00;
+    transition: 1s;
+
+}
+
+#table {
+
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+#fields {
+
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+#data {
+
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #202020;
+    font-size: 20px;
+
+}
+
+#data span {
+
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}
+
+#fields p, #data span p {
+
+    height: 90%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #202020;
+
+}

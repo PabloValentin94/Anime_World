@@ -32,7 +32,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     background-color: transparent;
-    border: 3px solid #000000;
+    border: 3px solid #202020;
     border-radius: 10px;
     box-shadow: 20px 20px rgba(32, 32, 32, 0.5);
 
@@ -117,11 +117,11 @@ body {
     background-color: #FFFFFF;
     border: none;
     border-radius: 2px;
-    color: #000000;
+    color: #202020;
     font-size: 20px;
     text-align: center;
     padding: 5px;
-    outline: 1px solid #000000;
+    outline: 1px solid #202020;
     cursor: pointer;
 
 }

@@ -13,11 +13,59 @@
 
         <link rel="icon" type="img/x-icon" href="./View/Assets/Images/Favicon.png">
 
-        <title>Document</title>
+        <title> Anime World - Ranking de Jogadores(as) </title>
 
     </head>
 
-    <body>
+    <body oncontextmenu="return false">
+
+        <div id="container">
+
+            <div id="header">
+
+                <div id="title">
+
+                    <img src="./View/Assets/Images/Favicon.png" alt="Icon">
+
+                    <h1> Anime World - Ranking </h1>
+
+                </div>
+
+                <div id="refresh">
+
+                    <button id="botao_recarregar" title="Recarregar ranking" onclick="listagem_jogadores()"></button>
+
+                </div>
+
+            </div>
+
+            <div id="search">
+
+                <label for="usuario"> Pesquisar: </label>
+                <input id="usuario" type="search" name="usuario" placeholder="Insira o nome de um usuário aqui para procurá-lo."
+                min="2" maxlength="25">
+
+                <button onclick="pesquisar_jogador()"> Procurar </button>
+
+            </div>
+
+            <div id="table">
+
+                <span id="fields" style="background-color: #FFFFFF; font-weight: bolder;">
+
+                    <p> Posição </p>
+
+                    <p> Jogador(a) </p>
+
+                    <p> Recorde </p>
+
+                </span>
+
+                <div id="data">  </div>
+
+            </div>
+
+        </div>
         
     </body>
 
