@@ -18,7 +18,7 @@ switch($url)
     break;
 
     case "/form":
-        DataController::LoadPage("Form");
+        (count($_POST) > 0) ? DataController::LoadPage("Form") : header("Location: /");
     break;
 
     case "/form/save":

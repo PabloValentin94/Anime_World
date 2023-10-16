@@ -281,7 +281,7 @@ function verificar_cartas_escolhidas()
 
                 segunda_carta_escolhida = "";
 
-            }, 250);
+            }, 300);
 
         }
 

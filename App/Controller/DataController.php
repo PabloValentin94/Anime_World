@@ -19,17 +19,22 @@ class DataController extends Controller
         try
         {
 
-            if($arquivo_html != "Game")
+            if($arquivo_html != "Game" && $arquivo_html != "Form")
             {
 
                 session_destroy();
 
             }
 
-            else if($arquivo_html == "Form" && count($_POST) > 0)
+            else if($arquivo_html == "Form" && isset($_POST["anime"]))
             {
 
-                $_SESSION["anime"] = $_POST["anime"];
+                if(!isset($_SESSION["anime"]))
+                {
+
+                    $_SESSION["anime"] = $_POST["anime"];
+
+                }
 
             }
 
@@ -56,7 +61,7 @@ class DataController extends Controller
             {
 
                 exit("<script> alert('Não são permitidos campos preenchidos somente com espaços! Revise seus dados e tente novamente.'); " .
-                     "history.pushState(null,null,'http://localhost:8000/form'); " .
+                     "history.pushState(null,null,'http://localhost:8000/'); " .
                      "window.location.reload(true); </script>");
 
             }
@@ -102,7 +107,7 @@ class DataController extends Controller
     
                             $model->Save();
     
-                            header("Location: /form");
+                            header("Location: /");
 
                             parent::GenerateBackup();
     
@@ -111,7 +116,7 @@ class DataController extends Controller
                         case 1:
     
                             exit("<script> alert('Este Usuário já está cadastrado! Tente outra opção.'); " .
-                                 "history.pushState(null,null,'http://localhost:8000/form'); " .
+                                 "history.pushState(null,null,'http://localhost:8000/'); " .
                                  "window.location.reload(true); </script>");
     
                         break;
@@ -131,7 +136,7 @@ class DataController extends Controller
 
                     $model->Save();
 
-                    header("Location: /form");
+                    header("Location: /");
 
                     parent::GenerateBackup();
 
@@ -161,7 +166,7 @@ class DataController extends Controller
             {
 
                 exit("<script> alert('Não são permitidos campos preenchidos somente com espaços! Revise seus dados e tente novamente.'); " .
-                     "history.pushState(null,null,'http://localhost:8000/form'); " .
+                     "history.pushState(null,null,'http://localhost:8000/'); " .
                      "window.location.reload(true); </script>");
 
             }
@@ -171,7 +176,7 @@ class DataController extends Controller
 
                 $model = new DataModel();
 
-                $model->GetData($_POST["usuario"], "usuario");
+                $model->GetData();
 
                 $usuarios = $model->dados;
 
@@ -189,26 +194,47 @@ class DataController extends Controller
                         md5($_POST["senha"]) == $item->senha)
                         {
 
-                            if($_POST["usuario_novo"] == $item->usuario && $_POST["usuario"] != $_POST["usuario_novo"])
+                            $model_comparacoes = new DataModel();
+
+                            $model_comparacoes->GetData();
+
+                            foreach($model_comparacoes->dados as $usuario_comparacao)
                             {
 
-                                $condicao = 1;
-
-                                break;
+                                if($_POST["usuario_novo"] == $usuario_comparacao->usuario)
+                                {
+    
+                                    $condicao = 1;
+    
+                                    break;
+    
+                                }
+    
+                                else
+                                {
+    
+                                    $condicao = 2;
+    
+                                    break;
+    
+                                }
 
                             }
+        
+                        }
 
-                            else
-                            {
+                        if($condicao == 2)
+                        {
 
-                                $condicao = 2;
+                            break;
 
-                                break;
+                        }
 
-                            }
+                        else
+                        {
 
                             $id_array++;
-        
+
                         }
 
                     }
@@ -219,7 +245,7 @@ class DataController extends Controller
                         case 0:
 
                             exit("<script> alert('Usuário ou senha incorretos! Revise seus dados e tente novamente.'); " .
-                                 "history.pushState(null,null,'http://localhost:8000/form'); " .
+                                 "history.pushState(null,null,'http://localhost:8000/'); " .
                                  "window.location.reload(true); </script>");
 
                         break;
@@ -227,7 +253,7 @@ class DataController extends Controller
                         case 1:
 
                             exit("<script> alert('Já existe um usuário com este nome! Tente outra opção.'); " .
-                                 "history.pushState(null,null,'http://localhost:8000/form'); " .
+                                 "history.pushState(null,null,'http://localhost:8000/'); " .
                                  "window.location.reload(true); </script>");
 
                         break;
@@ -246,7 +272,7 @@ class DataController extends Controller
 
                             $model->Save();
 
-                            header("Location: /form");
+                            header("Location: /");
 
                             parent::GenerateBackup();
 
@@ -260,7 +286,7 @@ class DataController extends Controller
                 {
 
                     exit("<script> alert('Este usuário não existe! Verifique se você realmente está cadastrado.'); " .
-                         "history.pushState(null,null,'http://localhost:8000/form'); " .
+                         "history.pushState(null,null,'http://localhost:8000/'); " .
                          "window.location.reload(true); </script>");
 
                 }
@@ -288,7 +314,7 @@ class DataController extends Controller
             {
 
                 exit("<script> alert('Não são permitidos campos preenchidos somente com espaços! Revise seus dados e tente novamente.'); " .
-                     "history.pushState(null,null,'http://localhost:8000/form'); " .
+                     "history.pushState(null,null,'http://localhost:8000/'); " .
                      "window.location.reload(true); </script>");
 
             }
@@ -301,7 +327,7 @@ class DataController extends Controller
 
                     (new DataModel())->Manipulate((int) $_POST["jogador"], (int) $_POST["condicao"]);
 
-                    header("Location: /form");
+                    header("Location: /");
 
                     parent::GenerateBackup();
 
@@ -311,7 +337,7 @@ class DataController extends Controller
                 {
 
                     exit("<script> alert('Senha mestra incorreta! Tente novamente.'); " .
-                         "history.pushState(null,null,'http://localhost:8000/form'); " .
+                         "history.pushState(null,null,'http://localhost:8000/'); " .
                          "window.location.reload(true); </script>");
 
                 }
@@ -323,7 +349,7 @@ class DataController extends Controller
         catch(Exception $ex)
         {
 
-            exit("Erro: " . $ex . "\n\n" . "Fonte: DataController->DeactivateUser()");
+            exit("Erro: " . $ex . "\n\n" . "Fonte: DataController->ChangeConditionUser()");
 
         }
 
@@ -339,7 +365,7 @@ class DataController extends Controller
             {
 
                 exit("<script> alert('Não são permitidos campos preenchidos somente com espaços! Revise seus dados e tente novamente.'); " .
-                     "history.pushState(null,null,'http://localhost:8000/form'); " .
+                     "history.pushState(null,null,'http://localhost:8000/'); " .
                      "window.location.reload(true); </script>");
 
             }
@@ -395,7 +421,7 @@ class DataController extends Controller
                         case 0:
 
                             exit("<script> alert('Usuário ou senha incorretos! Revise seus dados e tente novamente.'); " .
-                                 "history.pushState(null,null,'http://localhost:8000/form'); " .
+                                 "history.pushState(null,null,'http://localhost:8000/'); " .
                                  "window.location.reload(true); </script>");
 
                         break;
@@ -403,7 +429,7 @@ class DataController extends Controller
                         case 1:
 
                             exit("<script> alert('Este usuário está banido e, portanto, não pode jogar! Por favor, não insista.'); " .
-                                 "history.pushState(null,null,'http://localhost:8000/form'); " .
+                                 "history.pushState(null,null,'http://localhost:8000/'); " .
                                  "window.location.reload(true); </script>");
 
                         break;
@@ -411,8 +437,6 @@ class DataController extends Controller
                         case 2:
 
                             $_SESSION["id_usuario"] = $usuarios[$id_array]->id;
-    
-                            $_SESSION["cpf"] = $usuarios[$id_array]->cpf;
     
                             $_SESSION["usuario"] = $usuarios[$id_array]->usuario;
             
@@ -430,7 +454,7 @@ class DataController extends Controller
                 {
 
                     exit("<script> alert('Este usuário não existe! Verifique se você realmente está cadastrado.'); " .
-                         "history.pushState(null,null,'http://localhost:8000/form'); " .
+                         "history.pushState(null,null,'http://localhost:8000/'); " .
                          "window.location.reload(true); </script>");
 
                 }

@@ -18,8 +18,6 @@ body {
     justify-content: center;
     background-color: #202020;
     background-image: linear-gradient(315deg, #98C8FD, #8B7EFB);
-    background-repeat: no-repeat;
-    background-position: center;
 
 }
 
@@ -78,13 +76,14 @@ body {
 #options select {
 
     background-color: #202020;
-    border: 2px solid #FFFFFF;
+    border: none;
     border-radius: 5px;
     color: #FFFFFF;
     font-size: 15px;
     font-weight: bold;
     text-align: left;
     padding: 10px;
+    outline: 2px solid #FFFFFF;
     cursor: pointer;
     transition: 1s;
 
@@ -92,7 +91,7 @@ body {
 
 #options select:hover {
 
-    border: 2px solid #FFFF00;
+    outline: 2px solid #FFFF00;
     transition: 1s;
 
 }

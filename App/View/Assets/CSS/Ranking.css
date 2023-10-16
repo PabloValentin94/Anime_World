@@ -18,8 +18,6 @@ body {
     justify-content: center;
     background-color: #202020;
     background-image: linear-gradient(315deg, #98C8FD, #8B7EFB);
-    background-repeat: no-repeat;
-    background-position: center;
 
 }
 
@@ -44,7 +42,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
 
 }
 
@@ -62,7 +59,7 @@ body {
 #title img {
 
     width: 10%;
-    margin-right: 5px;
+    margin-right: 10px;
 
 }
 
@@ -89,7 +86,6 @@ body {
     background-size: 70% 70%;
     background-repeat: no-repeat;
     background-position: center;
-    border: none;
     border: 2px solid #202020;
     border-radius: 10px;
     cursor: pointer;
@@ -129,11 +125,11 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #FFFFFF;
-    font-size: 15px;
-    text-align: center;
-    color: #000000;
     border: none;
     border-radius: 2px;
+    color: #000000;
+    font-size: 15px;
+    text-align: center;
     margin-left: 15px;
     margin-right: 15px;
     padding: 5px;
@@ -154,6 +150,7 @@ body {
     height: auto;
     width: auto;
     background-color: #202020;
+    border: 2px solid #FFFFFF;
     border-radius: 5px;
     color: #FFFFFF;
     font-weight: bold;
@@ -165,6 +162,7 @@ body {
 
 #search button:hover {
 
+    border: 2px solid #FFFF00;
     color: #FFFF00;
     transition: 1s;
 
@@ -185,13 +183,15 @@ body {
 
 #fields {
 
-    height: 90%;
+    height: 60px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #FFFFFF;
     border-radius: 5px;
+    font-weight: bolder;
     padding: 10px;
 
 }
@@ -206,9 +206,9 @@ body {
     justify-content: space-evenly;
     background-color: #FFFFFF;
     border-radius: 5px;
-    margin-top: 10px;
     color: #202020;
     font-size: 20px;
+    margin-top: 10px;
 
 }
 

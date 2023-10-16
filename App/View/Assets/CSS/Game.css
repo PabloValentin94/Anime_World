@@ -90,13 +90,13 @@ body {
 
 .reveal_card {
 
-    animation: reveal_card 0.30s 1 linear;
+    animation: reveal_card 0.300s 1 linear;
 
 }
 
 .hidden_card {
 
-    animation: hidden_card 0.25s 1 linear;
+    animation: hidden_card 0.300s 1 linear;
 
 }
 

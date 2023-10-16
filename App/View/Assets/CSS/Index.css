@@ -118,14 +118,14 @@ body {
 
 #background_gradient form button {
 
-    padding: 10px;
     border: 2px #FFFFFF solid;
     border-radius: 5px;
     background-color: transparent;
     font-size: 20px;
     color: #FFFFFF;
-    transition: 1s;
+    padding: 10px;
     cursor: pointer;
+    transition: 1s;
 
 }
 
