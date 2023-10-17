@@ -176,7 +176,7 @@ class DataController extends Controller
 
                 $model = new DataModel();
 
-                $model->GetData();
+                $model->GetData($_POST["usuario"], "usuario");
 
                 $usuarios = $model->dados;
 
@@ -190,15 +190,12 @@ class DataController extends Controller
                     foreach($usuarios as $item)
                     {
 
-                        if($_POST["usuario"] == $item->usuario &&
-                        md5($_POST["senha"]) == $item->senha)
+                        if($_POST["usuario"] == $item->usuario && md5($_POST["senha"]) == $item->senha)
                         {
 
-                            $model_comparacoes = new DataModel();
+                            $model->GetData();
 
-                            $model_comparacoes->GetData();
-
-                            foreach($model_comparacoes->dados as $usuario_comparacao)
+                            foreach($model->dados as $usuario_comparacao)
                             {
 
                                 if($_POST["usuario_novo"] == $usuario_comparacao->usuario)
@@ -215,19 +212,17 @@ class DataController extends Controller
     
                                     $condicao = 2;
     
-                                    break;
-    
                                 }
 
                             }
+
+                            if($condicao == 2)
+                            {
+
+                                break;
+
+                            }
         
-                        }
-
-                        if($condicao == 2)
-                        {
-
-                            break;
-
                         }
 
                         else
