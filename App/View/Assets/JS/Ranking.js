@@ -50,7 +50,7 @@ function listagem_jogadores()
 
                     posicao++;
 
-                    players.push({"posicao": posicao.toString() + "º", "usuario": lista_jogadores[i].usuario, "recorde": lista_jogadores[i].recorde});
+                    players.push({"posicao": posicao.toString(), "usuario": lista_jogadores[i].usuario, "recorde": lista_jogadores[i].recorde});
 
                 }
     
