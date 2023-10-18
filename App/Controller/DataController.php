@@ -406,7 +406,12 @@ class DataController extends Controller
     
                         }
 
-                        $id_array++;
+                        else
+                        {
+
+                            $id_array++;
+
+                        }
 
                     }
 
@@ -432,6 +437,8 @@ class DataController extends Controller
                         case 2:
 
                             $_SESSION["id_usuario"] = $usuarios[$id_array]->id;
+
+                            $_SESSION["anime"] = $usuarios[$id_array]->anime;
     
                             $_SESSION["usuario"] = $usuarios[$id_array]->usuario;
             

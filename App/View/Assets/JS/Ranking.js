@@ -50,7 +50,7 @@ function listagem_jogadores()
 
                     posicao++;
 
-                    players.push({"posicao": posicao.toString(), "usuario": lista_jogadores[i].usuario, "recorde": lista_jogadores[i].recorde});
+                    players.push({"posicao": posicao.toString() + "º", "usuario": lista_jogadores[i].usuario, "recorde": lista_jogadores[i].recorde});
 
                 }
     
@@ -100,8 +100,6 @@ function listagem_jogadores()
 
     });
 
-    //document.getElementById("usuario").value = "";
-
 }
 
 function pesquisar_jogador()
@@ -136,7 +134,7 @@ function pesquisar_jogador()
         if(jogador != "")
         {
     
-            alert("Usuário: " + jogador.usuario + ".\n\nPosição no Ranking: " + jogador.posicao + "º lugar.\n\nRecorde: " + jogador.recorde + ".");
+            alert("Usuário: " + jogador.usuario + ".\n\nPosição no Ranking: " + jogador.posicao + " lugar.\n\nRecorde: " + jogador.recorde + ".");
     
         }
     
