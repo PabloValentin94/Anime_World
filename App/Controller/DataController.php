@@ -198,7 +198,7 @@ class DataController extends Controller
                             foreach($model->dados as $usuario_comparacao)
                             {
 
-                                if($_POST["usuario_novo"] == $usuario_comparacao->usuario)
+                                if($_POST["usuario_novo"] == $usuario_comparacao->usuario && $_POST["usuario_novo"] != $_POST["usuario"])
                                 {
     
                                     $condicao = 1;
