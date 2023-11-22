@@ -1,17 +1,17 @@
 const cartas = [
 
-    {carta: "./View/Assets/Images/Cards/Dragon_Ball/01.jpg"},
-    {carta: "./View/Assets/Images/Cards/Dragon_Ball/02.jpg"},
-    {carta: "./View/Assets/Images/Cards/Dragon_Ball/03.jpg"},
-    {carta: "./View/Assets/Images/Cards/Hunter_Hunter/01.jpg"},
-    {carta: "./View/Assets/Images/Cards/Hunter_Hunter/02.jpg"},
-    {carta: "./View/Assets/Images/Cards/Hunter_Hunter/03.jpg"},
-    {carta: "./View/Assets/Images/Cards/JoJo/01.jpg"},
-    {carta: "./View/Assets/Images/Cards/JoJo/02.jpg"},
-    {carta: "./View/Assets/Images/Cards/JoJo/03.jpg"},
-    {carta: "./View/Assets/Images/Cards/Naruto/01.jpg"},
-    {carta: "./View/Assets/Images/Cards/Naruto/02.jpg"},
-    {carta: "./View/Assets/Images/Cards/Naruto/03.jpg"}
+    {carta: "./View/Assets/Images/Cards/Attack_on_Titan/Attack_on_Titan.jpg"},
+    {carta: "./View/Assets/Images/Cards/Berserk/Berserk.jpg"},
+    {carta: "./View/Assets/Images/Cards/Bleach/Bleach.jpg"},
+    {carta: "./View/Assets/Images/Cards/Boku_no_Hero/Boku_no_Hero.jpg"},
+    {carta: "./View/Assets/Images/Cards/Dragon_Ball/Dragon_Ball.jpg"},
+    {carta: "./View/Assets/Images/Cards/Fairy_Tail/Fairy_Tail.jpg"},
+    {carta: "./View/Assets/Images/Cards/Hunter_Hunter/Hunter_Hunter.jpg"},
+    {carta: "./View/Assets/Images/Cards/JoJo/JoJo.jpg"},
+    {carta: "./View/Assets/Images/Cards/Jujutsu_Kaisen/Jujutsu_Kaisen.jpg"},
+    {carta: "./View/Assets/Images/Cards/Nanatsu_no_Taizai/Nanatsu_no_Taizai.jpg"},
+    {carta: "./View/Assets/Images/Cards/Naruto_Shippuden/Naruto_Shippuden.jpg"},
+    {carta: "./View/Assets/Images/Cards/One_Piece/One_Piece.jpg"}
 
 ];
 
